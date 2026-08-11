@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Paciente - Clínica Dorella</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="micro-header">
+            <p>Av. Franz Voegeli, 303 - Continental, Osasco - SP, 06020-190</p>
+        </div>
+
+        <div class="cabeçalho-principal">
+
+            <a href="index.html">
+                <img
+                    src="img/dourado.png"
+                    alt="Logo Dorella"
+                    class="logo-header"
+                >
+            </a>
+
+            <div class="menu-items-header">
+                <h3>
+                    <a href="index.html" style="color:#D9B154;text-decoration:none;">
+                        Sobre nós
+                    </a>
+                </h3>
+
+                <h3>
+                    <a href="index.html#tratamentos" style="color:#D9B154;text-decoration:none;">
+                        Tratamentos
+                    </a>
+                </h3>
+
+                <h3>
+                    <a href="index.html#estrutura" style="color:#D9B154;text-decoration:none;">
+                        Estrutura
+                    </a>
+                </h3>
+            </div>
+
+            <div class="contatos-header">
+                <p>contato@clinicadorella.com.br</p>
+                <p>Telefone: (11) 95907-3433</p>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="paciente-container">
+
+            <div class="paciente-box">
+
+                <div class="paciente-topo">
+
+                    <div>
+                        <p class="paciente-subtitulo">Área do Paciente</p>
+                        <h1>
+                            Olá,
+                            <span id="nomeUsuario">Paciente</span>!
+                        </h1>
+                    </div>
+
+                    <button id="logoutBtn" class="logout-btn">
+                        Sair
+                    </button>
+
+                </div>
+
+                <p class="paciente-intro">
+                    Bem-vindo à sua área exclusiva da Clínica Dorella.
+                </p>
+
+                <div class="paciente-cards">
+
+                    <div class="paciente-card">
+                        <h2>Agendar consulta</h2>
+
+                        <p>
+                            Escolha o tratamento, a data e o melhor horário
+                            para sua consulta.
+                        </p>
+
+                        <button id="agendarBtn">
+                            Agendar
+                        </button>
+                    </div>
+
+                    <div class="paciente-card">
+                        <h2>Meus agendamentos</h2>
+
+                        <p>
+                            Consulte suas próximas consultas e acompanhe
+                            os agendamentos realizados.
+                        </p>
+
+                        <button id="consultasBtn">
+                            Visualizar
+                        </button>
+                    </div>
+
+                    <div class="paciente-card">
+                        <h2>Meus dados</h2>
+
+                        <p>
+                            Consulte e futuramente altere suas informações
+                            cadastradas.
+                        </p>
+
+                        <button id="dadosBtn">
+                            Ver dados
+                        </button>
+                    </div>
+
+                </div>
+
+                <div id="conteudoPaciente" class="conteudo-paciente"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="rodape">
+
+            <div class="rodape-itens">
+
+                <div class="rodape-item-1">
+                    <h2>Localização</h2>
+                    <p>CLÍNICA DORELLA</p>
+                    <p>Edifício Osasco Prime Center</p>
+                    <p>Av. Franz Voegeli, 303 - Continental</p>
+                    <p>Osasco - SP, 06020-190</p>
+                </div>
+
+                <div class="rodape-item-2">
+                    <h1>CLÍNICA DORELLA</h1>
+                    <p>Odontologia & Estética</p>
+
+                    <h2>REDES SOCIAIS</h2>
+
+                    <p>@clinicadorellaodontologia</p>
+                    <p>@ag.odontologia</p>
+                </div>
+
+                <div class="rodape-item-3">
+                    <h2>AGENDE SUA CONSULTA</h2>
+
+                    <div class="rodape-itens-whatsapp">
+                        <p>WhatsApp</p>
+                        <p>(11) 95907-3433</p>
+                    </div>
+
+                    <p>contato@clinicadorella.com.br</p>
+                    <p>FUNCIONAMENTO: 09h - 20h</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="paciente.js"></script>
+
+</body>
+
+</html>

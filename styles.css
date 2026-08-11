@@ -874,4 +874,202 @@ footer {
         font-size: 11px;
         line-height: 1.25;
     }
+
+   /* =========================
+   ÁREA DO PACIENTE
+========================= */
+
+.paciente-container {
+    width: 100%;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+}
+
+.paciente-box {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #28293E;
+    color: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.paciente-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.paciente-subtitulo {
+    color: #D9B154;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.paciente-topo h1 {
+    color: #D9B154;
+    font-size: 38px;
+}
+
+.paciente-intro {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #d5d5d5;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: 2px solid #D9B154;
+    color: #D9B154;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #D9B154;
+    color: #28293E;
+}
+
+.paciente-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.paciente-card {
+    background-color: white;
+    color: #28293E;
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.paciente-card:hover {
+    transform: translateY(-5px);
+}
+
+.paciente-card h2 {
+    color: #28293E;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.paciente-card p {
+    line-height: 1.5;
+    flex: 1;
+    color: #555;
+}
+
+.paciente-card button {
+    margin-top: 25px;
+
+    background-color: #D9B154;
+    color: #28293E;
+
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.paciente-card button:hover {
+    background-color: #c39a44;
+}
+
+.conteudo-paciente {
+    margin-top: 30px;
+}
+
+.area-paciente-conteudo {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.area-paciente-conteudo h2 {
+    color: #D9B154;
+    margin-bottom: 12px;
+}
+
+.area-paciente-conteudo p {
+    color: white;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ÁREA DO PACIENTE - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .paciente-container {
+        padding: 35px 15px;
+    }
+
+    .paciente-box {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .paciente-topo {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .paciente-topo h1 {
+        font-size: 30px;
+    }
+
+    .paciente-intro {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .paciente-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .paciente-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .paciente-card h2 {
+        font-size: 21px;
+    }
+
+    .logout-btn {
+        padding: 9px 24px;
+    }
+
+    .area-paciente-conteudo {
+        padding: 20px;
+    }
+}
 }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Clínica Dorella</title>
-    <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -17,69 +17,185 @@
         </div>
 
         <div class="cabeçalho-principal">
+
             <a href="index.html">
-                <img src="img/dourado.png" alt="Logo DORELLA" class="logo-header">
+                <img src="img/dourado.png" alt="Logo Dorella" class="logo-header">
             </a>
 
             <div class="menu-items-header">
-                <h3><a href="index.html" style="color: #D9B154; text-decoration: none;">Sobre nós</a></h3>
-                <h3><a href="index.html#tratamentos" style="color: #D9B154; text-decoration: none;">Tratamentos</a></h3>
-                <h3><a href="index.html#estrutura" style="color: #D9B154; text-decoration: none;">Estrutura</a></h3>
+                <h3><a href="index.html" style="color:#D9B154;text-decoration:none;">Sobre nós</a></h3>
+                <h3><a href="index.html#tratamentos" style="color:#D9B154;text-decoration:none;">Tratamentos</a></h3>
+                <h3><a href="index.html#estrutura" style="color:#D9B154;text-decoration:none;">Estrutura</a></h3>
             </div>
 
             <div class="contatos-header">
                 <p>contato@clinicadorella.com.br</p>
                 <p>Telefone: (11) 95907-3433</p>
             </div>
+
         </div>
     </header>
 
     <main>
+
         <div class="login-container">
+
             <div class="login-box">
-                <h1>Área do Paciente</h1>
 
-                <form action="#" method="POST">
-                    <input type="text" name="usuario" placeholder="Usuário" required>
-                    <input type="password" name="senha" placeholder="Senha" required>
-                    <button type="submit">Entrar</button>
-                </form>
+    <h1>Área do Paciente</h1>
 
-            </div>
+    <form id="loginForm">
+
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Usuário"
+            required
+        >
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="Senha"
+            required
+        >
+
+        <button type="submit">
+            Entrar
+        </button>
+
+        <p id="mensagem-login"></p>
+
+    </form>
+
+    <p>
+        Ainda não possui cadastro?
+        <a href="cadastro.html">Cadastre-se</a>
+    </p>
+
+</div>
+            
         </div>
+
     </main>
 
     <footer>
+
         <div class="rodape">
+
             <div class="rodape-itens">
+
                 <div class="rodape-item-1">
+
                     <h2>Localização</h2>
+
                     <p>CLÍNICA DORELLA</p>
-                    <P>Edifício Osasco Prime Center</P>
-                    <P>Av. Franz Voegeli, 303 - Continental</P>
+
+                    <p>Edifício Osasco Prime Center</p>
+
+                    <p>Av. Franz Voegeli, 303 - Continental</p>
+
                     <p>Osasco - SP, 06020-190</p>
+
                 </div>
 
                 <div class="rodape-item-2">
+
                     <h1>CLÍNICA DORELLA</h1>
+
                     <p>Odontologia & Estética</p>
+
                     <h2>REDES SOCIAIS</h2>
+
                     <p>@clinicadorellaodontologia</p>
+
                     <p>@ag.odontologia</p>
+
                 </div>
 
                 <div class="rodape-item-3">
-                    <h2>AGENDE SUA CONSULTA</h2>
-                    <div class="rodape-itens-whatsapp">
-                        <p>WP IMG</p>
-                        <p>(11) 95907-3433</p>
-                    </div>
-                    <p>contato@clinicadorella.com.br</p>
-                    <p>FUNCIONAMENTO: 09h - 20h</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
+                    <h2>AGENDE SUA CONSULTA</h2>
+
+                    <div class="rodape-itens-whatsapp">
+
+                        <p>WhatsApp</p>
+
+                        <p>(11) 95907-3433</p>
+
+                    </div>
+
+                    <p>contato@clinicadorella.com.br</p>
+
+                    <p>FUNCIONAMENTO: 09h - 20h</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+  <script>
+        const form = document.getElementById("loginForm");
+        const mensagem = document.getElementById("mensagem-login");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            mensagem.style.color = "#D9B154";
+            mensagem.textContent = "Entrando...";
+
+            const usuario = document
+                .getElementById("usuario")
+                .value
+                .trim();
+
+            const senha = document
+                .getElementById("senha")
+                .value;
+
+            try {
+                const resposta = await fetch("http://localhost:3001/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        usuario: usuario,
+                        senha: senha
+                    })
+                });
+
+                const dados = await resposta.json();
+
+                if (resposta.ok) {
+                    localStorage.setItem("token", dados.token);
+                    localStorage.setItem("usuario", dados.usuario.usuario);
+                    localStorage.setItem("nome", dados.usuario.nome);
+
+                    mensagem.style.color = "lightgreen";
+                    mensagem.textContent = "Login realizado com sucesso!";
+
+                    setTimeout(function () {
+                        window.location.href = "./paciente.html";
+                    }, 800);
+
+                } else {
+                    mensagem.style.color = "red";
+                    mensagem.textContent =
+                        dados.mensagem || "Usuário ou senha inválidos.";
+                }
+
+            } catch (erro) {
+                console.error(erro);
+
+                mensagem.style.color = "red";
+                mensagem.textContent =
+                    "Não foi possível conectar ao servidor.";
+            }
+        });
+    </script>
 </body>
+
 </html>
