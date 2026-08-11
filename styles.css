@@ -512,4 +512,185 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    /* RESPONSIVIDADE MOBILE COMPLETA */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .micro-header {
+        font-size: 10px;
+        letter-spacing: 1px;
+        word-spacing: 0;
+        padding: 10px 8px;
+        line-height: 1.4;
+    }
+
+    .cabeçalho-principal {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .logo-header {
+        height: 75px;
+        width: auto;
+    }
+
+    .menu-items-header {
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu-items-header h3 {
+        font-size: 18px;
+    }
+
+    .contatos-header {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    .login-top-right {
+        position: static;
+        margin-top: 5px;
+    }
+
+    .login-top-right a {
+        display: inline-block;
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+
+    .apresentacao {
+        padding: 40px 15px;
+        margin-bottom: 30px;
+        gap: 30px;
+    }
+
+    .apresentacao-primeira-linha {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .apresentacao-texto {
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        gap: 20px;
+    }
+
+    .apresentacao-texto h1 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .apresentacao-texto p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .imagem1,
+    .imagem2,
+    .imagem3 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .apresentacao-segunda-linha {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .tratamentos {
+        padding: 60px 15px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        gap: 40px;
+    }
+
+    .tratamentos-titulo {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 20px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .tratamentos-lista {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .tratamentos-lista-1,
+    .tratamentos-lista-2,
+    .tratamentos-lista-3 {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .tratamento-lista-item {
+        width: 100%;
+        max-width: 320px;
+        font-size: 18px;
+        padding: 14px 10px;
+        white-space: normal;
+    }
+
+    .login-container {
+        padding: 50px 15px;
+    }
+
+    .login-box {
+        width: 100%;
+        max-width: 350px;
+        padding: 35px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .login-box input {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    .login-box button {
+        width: 150px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    .rodape,
+    .rodape-itens {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .rodape-itens p {
+        font-size: 13px;
+    }
+}
 }
