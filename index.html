@@ -1,116 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Clínica Dorella</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
     <header>
+
         <div class="micro-header">
             <p>Av. Franz Voegeli, 303 - Continental, Osasco - SP, 06020-190</p>
         </div>
 
         <div class="cabeçalho-principal">
-            <a href="index.html">
-                <img src="img/dourado.png" alt="Logo DORELLA" class="logo-header">
+
+            <a href="index.html" class="logo-link">
+                <img
+                    src="img/dourado.png"
+                    alt="Logo Dorella"
+                    class="logo-header"
+                >
             </a>
 
-            <div class="menu-items-header">
-                <h3>Sobre nós</h3>
-                <h3>Tratamentos</h3>
-                <h3>Estrutura</h3>
+            <button
+                class="menu-mobile"
+                id="menu-mobile"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+            <nav class="menu-items-header" id="menu-items-header">
+
+                <a href="#sobre">
+                    Sobre nós
+                </a>
+
+                <a href="#tratamentos">
+                    Tratamentos
+                </a>
+
+                <a href="#estrutura">
+                    Estrutura
+                </a>
+
+            </nav>
+
+            <div class="acoes-header">
+
+                <a
+                    href="login.html"
+                    class="login-top-right"
+                >
+                    Login
+                </a>
+
+                <div class="contatos-header">
+                    <p>contato@clinicadorella.com.br</p>
+                    <p>Telefone: (11) 95907-3433</p>
+                </div>
+
             </div>
 
-            <div class="login-top-right">
-                <a href="login.html">Login</a>
-            </div>
-
-            <div class="contatos-header">
-                <p>contato@clinicadorella.com.br</p>
-                <p>Telefone: (11) 95907-3433</p>
-            </div>
         </div>
+
     </header>
 
     <main>
-        <div class="apresentacao">
+
+        <section
+            class="apresentacao"
+            id="sobre"
+        >
+
             <div class="apresentacao-primeira-linha">
+
                 <div class="apresentacao-texto">
+
                     <h1>Clínica Dorella</h1>
-                    <p>Clínica para tratamentos e acompanhamento odontológico, lugar onde podemos dizer com propriedade,
-                        que temos um ambiente agradável para você trazer sua família e ter o melhor cuidado, pois temos
-                        excelentes profissionais que amam o que fazem e que estão aqui para servir você.</p>
+
+                    <p>
+                        Clínica para tratamentos e acompanhamento odontológico,
+                        lugar onde podemos dizer com propriedade que temos um
+                        ambiente agradável para você trazer sua família e ter
+                        o melhor cuidado.
+                    </p>
+
+                    <p>
+                        Temos excelentes profissionais que amam o que fazem
+                        e estão aqui para servir você.
+                    </p>
+
                 </div>
-                <img src="img/Group 24.png" alt="Interior clínica" class="imagem1">
+
+                <img
+                    src="img/Group 24.png"
+                    alt="Interior da Clínica Dorella"
+                    class="imagem1"
+                >
+
             </div>
 
-            <div class="apresentacao-segunda-linha">
-                <img src="img/Group 25.png" alt="Imagem clínica" class="imagem2">
-                <img src="img/Group 5.png" alt="Imagem clínica" class="imagem3">
+            <div
+                class="apresentacao-segunda-linha"
+                id="estrutura"
+            >
+
+                <img
+                    src="img/Group 25.png"
+                    alt="Estrutura da Clínica Dorella"
+                    class="imagem2"
+                >
+
+                <img
+                    src="img/Group 5.png"
+                    alt="Ambiente da Clínica Dorella"
+                    class="imagem3"
+                >
+
             </div>
-        </div>
+
+        </section>
 
         <div class="divisao"></div>
-        <div class="divisao"></div>
 
-        <div class="tratamentos">
+        <section
+            class="tratamentos"
+            id="tratamentos"
+        >
+
             <div class="tratamentos-titulo">
                 <h1>Saiba como podemos te ajudar</h1>
             </div>
+
             <div class="tratamentos-lista">
+
                 <div class="tratamentos-lista-1">
-                    <div class="tratamento-lista-item"><p>Clínico Geral</p></div>
-                    <div class="tratamento-lista-item"><p>Endodontia</p></div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Clínico Geral</p>
+                    </div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Endodontia</p>
+                    </div>
+
                 </div>
 
                 <div class="tratamentos-lista-2">
-                    <div class="tratamento-lista-item"><p>Implante</p></div>
-                    <div class="tratamento-lista-item"><p>Ortodontia</p></div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Implante</p>
+                    </div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Ortodontia</p>
+                    </div>
+
                 </div>
 
                 <div class="tratamentos-lista-3">
-                    <div class="tratamento-lista-item"><p>Prótese</p></div>
-                    <div class="tratamento-lista-item"><p>Facetas</p></div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Prótese</p>
+                    </div>
+
+                    <div class="tratamento-lista-item">
+                        <p>Facetas</p>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
+
+        </section>
+
     </main>
 
     <footer>
+
         <div class="rodape">
+
             <div class="rodape-itens">
+
                 <div class="rodape-item-1">
+
                     <h2>Localização</h2>
+
                     <p>CLÍNICA DORELLA</p>
                     <p>Edifício Osasco Prime Center</p>
-                    <p>Av. Franz Voegeli, 303 - Continental,</p>
+                    <p>Av. Franz Voegeli, 303 - Continental</p>
                     <p>Osasco - SP, 06020-190</p>
+
                 </div>
 
                 <div class="rodape-item-2">
+
                     <h1>CLÍNICA DORELLA</h1>
+
                     <p>Odontologia estética</p>
-                    <h2>REDES SOCIAIS</h2>
+
+                    <h2>Redes sociais</h2>
+
                     <p>@clinicadorellaodontologia</p>
                     <p>@ag.odontologia</p>
+
                 </div>
 
                 <div class="rodape-item-3">
-                    <h2>AGENDE SUA CONSULTA</h2>
+
+                    <h2>Agende sua consulta</h2>
+
                     <div class="rodape-itens-whatsapp">
-                        <p>WP IMG</p>
+
+                        <p>WhatsApp</p>
                         <p>(11) 95907-3433</p>
+
                     </div>
+
                     <p>contato@clinicadorella.com.br</p>
-                    <p>AGENDAMENTOS VIA WHATSAPP</p>
-                    <p>FUNCIONAMENTO: 09h - 20h</p>
+                    <p>Agendamentos via WhatsApp</p>
+                    <p>Funcionamento: 09h - 20h</p>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
+
+    <script>
+        const menuButton = document.getElementById("menu-mobile");
+        const menu = document.getElementById("menu-items-header");
+
+        menuButton.addEventListener("click", function () {
+            menu.classList.toggle("ativo");
+        });
+
+        document
+            .querySelectorAll(".menu-items-header a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+                    menu.classList.remove("ativo");
+                });
+
+            });
+    </script>
+
 </body>
+
 </html>

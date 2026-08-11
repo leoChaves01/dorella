@@ -25,4 +25,4 @@ function CountingAnagrams(str) {
   return varFiltersCg;
 }
 
-console.log(CountingAnagrams("aa aa odg dog gdo"));
+console.log(CountingAnagrams(readline()));
