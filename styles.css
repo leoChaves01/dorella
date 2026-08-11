@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 main {
@@ -38,9 +39,10 @@ header {
     background-color: black;
     width: 100%;
     padding: 12px 20px;
-    letter-spacing: 4px;
-    word-spacing: 3px;
+    letter-spacing: 3px;
+    word-spacing: 2px;
     font-size: 14px;
+    line-height: 1.4;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -79,19 +81,19 @@ header {
 }
 
 .menu-items-header h3:hover {
-    color: white;
+    color: #fff;
 }
 
 .contatos-header {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     padding: 30px 0;
     align-items: flex-start;
-    word-spacing: 4px;
+    word-spacing: 3px;
 }
 
-/* BOTÃO LOGIN DO HEADER */
+/* LOGIN TOPO */
 
 .login-top-right {
     position: absolute;
@@ -103,7 +105,7 @@ header {
     background-color: #D9B154;
     color: #1a1a1a;
     font-weight: bold;
-    padding: 8px 18px;
+    padding: 10px 22px;
     border-radius: 20px;
     text-decoration: none;
     transition: 0.3s ease;
@@ -120,10 +122,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 40px;
-    margin-bottom: 60px;
+    padding: 70px 40px;
+    margin-bottom: 50px;
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
 }
 
 .apresentacao-primeira-linha {
@@ -144,8 +146,9 @@ header {
 }
 
 .apresentacao-texto h1 {
-    font-size: 58px;
+    font-size: 56px;
     color: rgb(68, 67, 67);
+    line-height: 1.15;
 }
 
 .apresentacao-texto p {
@@ -160,7 +163,6 @@ header {
 
 .apresentacao-segunda-linha {
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
     gap: 30px;
     justify-content: center;
@@ -200,9 +202,9 @@ header {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding: 100px 20px;
-    margin-top: 60px;
-    margin-bottom: 120px;
+    padding: 90px 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .tratamentos-titulo {
@@ -330,7 +332,7 @@ header {
 
 footer {
     background-color: #2c2c3a;
-    color: #ffffff;
+    color: #fff;
     padding: 40px 0;
     width: 100%;
     text-align: center;
@@ -383,7 +385,7 @@ footer {
 
 @media (max-width: 1000px) {
     .cabeçalho-principal {
-        padding: 30px 30px;
+        padding: 30px;
         gap: 25px;
     }
 
@@ -400,125 +402,13 @@ footer {
     }
 
     .apresentacao-texto h1 {
-        font-size: 45px;
+        font-size: 44px;
     }
 }
 
 /* CELULAR */
 
 @media (max-width: 768px) {
-    .micro-header {
-        font-size: 11px;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-    }
-
-    .cabeçalho-principal {
-        flex-direction: column;
-        padding: 25px 20px;
-        gap: 25px;
-    }
-
-    .logo-header {
-        height: 90px;
-    }
-
-    .menu-items-header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .contatos-header {
-        align-items: center;
-        padding: 10px 0;
-        gap: 10px;
-    }
-
-    .login-top-right {
-        position: static;
-    }
-
-    .apresentacao {
-        padding: 50px 20px;
-        gap: 40px;
-    }
-
-    .apresentacao-primeira-linha {
-        flex-direction: column;
-        gap: 35px;
-    }
-
-    .apresentacao-texto {
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-    }
-
-    .apresentacao-texto h1 {
-        font-size: 40px;
-    }
-
-    .imagem1 {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .apresentacao-segunda-linha {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .imagem2,
-    .imagem3 {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .tratamentos {
-        margin-top: 30px;
-        margin-bottom: 80px;
-        padding: 70px 20px;
-    }
-
-    .tratamentos-titulo {
-        padding: 15px 30px;
-        text-align: center;
-    }
-
-    .tratamentos-lista-1,
-    .tratamentos-lista-2,
-    .tratamentos-lista-3 {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .tratamento-lista-item {
-        width: 100%;
-        max-width: 320px;
-        font-size: 20px;
-    }
-
-    .login-box {
-        padding: 40px 25px;
-    }
-
-    .login-box button {
-        width: 160px;
-    }
-
-    .rodape,
-    .rodape-itens {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* RESPONSIVIDADE MOBILE COMPLETA */
-@media (max-width: 768px) {
-
-    body {
-        overflow-x: hidden;
-    }
 
     .micro-header {
         font-size: 10px;
@@ -526,12 +416,13 @@ footer {
         word-spacing: 0;
         padding: 10px 8px;
         line-height: 1.4;
+        white-space: normal;
     }
 
     .cabeçalho-principal {
         flex-direction: column;
-        padding: 20px 15px;
-        gap: 20px;
+        padding: 20px 15px 25px;
+        gap: 18px;
     }
 
     .logo-header {
@@ -541,21 +432,13 @@ footer {
 
     .menu-items-header {
         flex-direction: column;
-        gap: 12px;
-        margin: 0;
+        gap: 10px;
         width: 100%;
+        margin: 0;
     }
 
     .menu-items-header h3 {
-        font-size: 18px;
-    }
-
-    .contatos-header {
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-        padding: 10px 0;
-        font-size: 13px;
+        font-size: 17px;
     }
 
     .login-top-right {
@@ -565,13 +448,22 @@ footer {
 
     .login-top-right a {
         display: inline-block;
-        padding: 10px 24px;
-        font-size: 16px;
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+
+    .contatos-header {
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding: 10px 0 0;
+        font-size: 12px;
+        word-spacing: 0;
     }
 
     .apresentacao {
-        padding: 40px 15px;
-        margin-bottom: 30px;
+        padding: 35px 15px 45px;
+        margin-bottom: 20px;
         gap: 30px;
     }
 
@@ -583,19 +475,20 @@ footer {
 
     .apresentacao-texto {
         width: 100%;
+        max-width: 420px;
         text-align: center;
-        font-size: 17px;
-        gap: 20px;
+        font-size: 16px;
+        gap: 18px;
     }
 
     .apresentacao-texto h1 {
-        font-size: 36px;
+        font-size: 32px;
         line-height: 1.15;
     }
 
     .apresentacao-texto p {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 15px;
+        line-height: 1.55;
     }
 
     .imagem1,
@@ -615,17 +508,17 @@ footer {
     }
 
     .tratamentos {
-        padding: 60px 15px;
+        padding: 50px 15px;
         margin-top: 20px;
         margin-bottom: 60px;
-        gap: 40px;
+        gap: 35px;
     }
 
     .tratamentos-titulo {
         width: 100%;
-        max-width: 320px;
-        padding: 14px 20px;
-        font-size: 17px;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -645,7 +538,7 @@ footer {
 
     .tratamento-lista-item {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
         font-size: 18px;
         padding: 14px 10px;
         white-space: normal;
@@ -673,8 +566,6 @@ footer {
 
     .login-box button {
         width: 150px;
-        padding: 12px;
-        font-size: 16px;
     }
 
     footer {
@@ -685,6 +576,7 @@ footer {
     .rodape-itens {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
         gap: 20px;
     }
@@ -693,4 +585,32 @@ footer {
         font-size: 13px;
     }
 }
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+    .micro-header {
+        font-size: 9px;
+    }
+
+    .logo-header {
+        height: 65px;
+    }
+
+    .menu-items-header h3 {
+        font-size: 16px;
+    }
+
+    .apresentacao-texto h1 {
+        font-size: 29px;
+    }
+
+    .apresentacao-texto p {
+        font-size: 14px;
+    }
+
+    .contatos-header {
+        font-size: 11px;
+    }
 }
