@@ -1,0 +1,10 @@
+backend/.env
+backend/node_modules/
+node_modules/
+*.log
+
+.vercel/
+public/
+.vercel
+.env*
+!backend/.env.example

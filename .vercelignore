@@ -1,0 +1,7 @@
+.git
+backend/.env
+**/node_modules
+backend/auth.test.js
+public
+
+**/.env*
